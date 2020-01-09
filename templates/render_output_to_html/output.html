@@ -1,0 +1,27 @@
+
+{% extends 'forms_template/base.html' %}
+
+ {% block page_heading %}
+
+     <li> <a href="{% url 'Advance_Amount_month_total_stats'  %}"><font color="white">Check Another Month Expenditures</font></a> </li> 
+
+    <li> <a href="{% url 'Advance_Amount'  %}"><font color="white">Go Back to Advance Amount</font></a> </li> 
+
+
+ <!--   <li><a href="#">Contact</a> </li>  --> 
+
+    {% endblock %}
+ 
+
+
+{% block content %}
+    <h2>Download Advance </font></h2>
+
+    <h2><center></center><font face = "Comic sans MS" size =" 5"  color="#2F0B3A">Advance Amount Expenditure Per Month</font></h2></center>
+
+
+
+       {{dframerender | safe}}
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'admin/login.html' %}
+{% load static %}
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+{% block branding %}
+<body style="background-color:#EAFAF1  ;">
+	  <link rel="stylesheet" href="{% static 'css/circle.css'%}">
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<div class="row">
+
+      <div class="col-lg-3">
+
+        <div class="profile-pic">
+   	<img class="rounded-circle img-thumbnail" src="{% static 'images/anandlogo.jpg'%}"  width="240px" height="270px" alt="Avatar" >
+        </div>
+       </div>
+     </div>
+
+
+   
+   
+
+    <div class="head">
+       <center><h1 id="name" style="font-family:comic sans ms;" style="color:blue;   ">Hi Neha,Kindly Login here</h1></center> 
+    </div>
+</body>
+{% endblock %}

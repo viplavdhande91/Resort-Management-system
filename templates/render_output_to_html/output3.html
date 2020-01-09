@@ -1,0 +1,29 @@
+{% extends 'forms_template/base.html' %}
+
+ {% block page_heading %}
+
+
+    <li> <a href="{% url 'Salary_Status_url'  %}"><font color="white">Go to Salary_status</font></a> </li>
+
+
+    <li> <a href="{% url 'this_month_Salary_template_edit'  %}"><font color="white">Check Salary Status Again</font></a> </li> 
+ 
+
+
+ <!--   <li><a href="#">Contact</a> </li>  --> 
+
+    {% endblock %}
+ 
+
+
+{% block content %}
+    <h2>Display Salary </font></h2>
+
+    <h2><center></center><font face = "Comic sans MS" size =" 5"  color="#2F0B3A">Salary Statistics of Specific Selected Month</font></h2></center>
+
+
+
+       {{object_list333 | safe}}
+
+
+{% endblock %}

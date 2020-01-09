@@ -1,0 +1,26 @@
+
+{% extends 'forms_template/base.html' %}
+
+ {% block page_heading %}
+
+
+    <li> <a href="{% url 'attendance'  %}"><font color="white">Go to Attendance</font></a> </li> 
+
+
+ <!--   <li><a href="#">Contact</a> </li>  --> 
+
+    {% endblock %}
+ 
+
+
+{% block content %}
+    <h2>Download Advance </font></h2>
+
+    <h2><center></center><font face = "Comic sans MS" size =" 5"  color="#2F0B3A">Generate Attendance Of Current Month(Display)</font></h2></center>
+
+
+
+       {{dframerender2 | safe}}
+
+
+{% endblock %}

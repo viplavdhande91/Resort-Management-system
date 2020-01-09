@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<title>Neha's Website Window</title> 
+<meta charset="utf-8"> 
+<meta name="viewport"
+content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> 
+<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> 
+</script> 
+<script src= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"> 
+</script> 
+<link rel="icon" href="{% static 'images/icons8-folder-480.png' %}"/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<link rel="stylesheet"
+href="{% static 'css/custom.css' %}">
+
+
+<script src= "{% static 'js/custom.js' %}"> 
+</script> 
+
+
+<!--css for background Image -->
+<style>
+section {
+  float: left;
+  margin: 0 1.5%;
+  width: 30%;
+}
+
+  aside {
+    width: 70%;
+    padding-left: 2rem;
+    margin-left: 2rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    color: #29627e;
+
+  margin: 10 1.5%;
+  width: 30%;
+}
+
+.carousel-inner .item{
+background-size:cover;
+width: 92vw;
+
+max-width: 100%;
+height: auto;
+
+max-height: 425px;
+
+
+
+}
+
+
+  body {background-color: #EFF5F2  ;}
+
+@media only screen and (min-width: 768px) {
+   .navbar {
+    height: 55px !important; 
+} 
+
+}
+</style>
+ 
+</head> 
+
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #34495E;"> 
+<div role="navigation"> 
+<div class="container"> 
+  <div class="navbar-header"> 
+     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse"> 
+      <span class="sr-only">Toggle navigation</span> 
+      <span class="icon-bar"></span> 
+      <span class="icon-bar"></span> 
+      <span class="icon-bar"></span> 
+     </button> 
+   
+  <a class="navbar-brand" href="{% url 'home'  %}"> <img src="{% static 'images/anandlogo.jpg'%}" class="rounded-circle"  alt="logo" style="width:45px; height: 40px;position: relative; left:-5px; top:-10px; background-size: cover;
+    border-radius:50% 50% 50% 50%;"> </a>
+
+  <a href="{% url 'djangoadmin' %}" class="navbar-brand"><font color="white"> All Saved Database</font></a> 
+ 
+
+  </div> 
+  <div class="navbar-collapse collapse"> 
+  <ul class="nav navbar-nav navbar-right"> 
+
+
+
+<!--    <li class="active"><a href="{% url 'home' %}">Home</a></li>  -->
+    {% block page_heading %}
+    {% endblock %}
+
+
+
+
+    <li> <a href="{% url 'admin:logout'  %}"><font color="white">Logout</font></a> </li> 
+
+
+  <!--  <li> <a href="#">About</a> </li> 
+    <li><a href="#">Contact</a> </li> -->
+  </ul> 
+</div> 
+</div> 
+  
+</div> 
+</nav> 
+
+
+
+
+    <!-- this div will give a gap of 0px -->
+    <div class="gap-10"></div>
+
+
+
+
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+
+</html>        
+
+
