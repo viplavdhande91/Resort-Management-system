@@ -6,7 +6,7 @@ decorator==4.4.0
 defusedxml==0.6.0
 diff-match-patch==20181111
 dj-database-url==0.5.0
-Django==2.2.2
+Django==2.2.13
 django-admin-interface==0.10.5
 django-colorfield==0.1.15
 django-flat-responsive==2.0
