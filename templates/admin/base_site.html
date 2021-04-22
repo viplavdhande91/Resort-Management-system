@@ -1,0 +1,16 @@
+{% extends 'admin/base_site.html' %}
+
+{% load static %}
+
+{% block branding %}
+    <div class="head">
+
+
+        </div>
+{% endblock %}
+
+{% block nav-global %}
+<a class="navbar-brand" href="{% url 'home'  %}"> <img src="{% static 'images/anandlogo.jpg'%}" class="rounded-circle"  alt="logo" style="width:65px; height: 65px;position: relative; left:-1080px; top:0px; background-size: cover;
+    border-radius:50% 50% 50% 50%;"> </a>
+
+{% endblock %}

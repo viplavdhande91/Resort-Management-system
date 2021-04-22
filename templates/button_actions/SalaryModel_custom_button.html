@@ -1,0 +1,119 @@
+{% extends 'admin/change_list.html' %}
+
+{% block object-tools %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     {% load static  %}
+     {% csrf_token %}
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Neha's Homepage</title>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="icon" href="{% static 'images/icons8-folder-480.png' %}"/>
+
+<style>
+  .bs-example{
+      margin: 20px;
+    }
+</style>
+</head>
+     
+<!---        <a href="{% url 'unsettled_Advance' %}" class="btn btn-info" role="button" style="margin:5px;">Generate Unsettled Advance Taken Of All Time</a> -->
+<div class="btn-toolbar" >
+<div class="bs-example">
+    
+    <div class="btn-group" style="margin:10px;">
+        <button type="button" class="btn btn-secondary  btn-sm">Salary</button>
+        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+            <span class="sr-only  btn-sm">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+            <a href="{% url 'this_month_Salary_template_edit' %}" class="dropdown-item  btn-sm" role="button" >
+            1)Generate Salary of this Month(Display / Insert Values and get Excel)</a> 
+            
+        </div>
+    </div>
+
+
+    <div class="btn-group" style="margin:10px;">
+        <button type="button" class="btn btn-success  btn-sm">Charts</button>
+        <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item  btn-sm">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item  btn-sm">Separated link</a>
+        </div>
+    </div>
+
+    <div class="btn-group" style="margin:5px;">
+        <button type="button" class="btn btn-info  btn-sm">Action</button>
+        <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item  btn-sm">Action</a>
+            <a href="#" class="dropdown-item  btn-sm">Another action</a>
+            <div class="dropdown-divider  btn-sm"></div>
+            <a href="#" class="dropdown-item  btn-sm">Separated link</a>
+        </div>
+
+    </div>
+
+
+    <div class="btn-group" style="margin:5px;">
+        <button type="button" class="btn btn-warning">Action</button>
+        <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Action</a>
+            <a href="#" class="dropdown-item">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">Separated link</a>
+        </div>
+    </div>
+
+
+    <div class="btn-group" style="margin:5px;">
+        <button type="button" class="btn btn-danger">Action</button>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Action</a>
+            <a href="#" class="dropdown-item">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">Separated link</a>
+        </div>
+    </div>
+    
+</div>
+</div>
+
+
+
+    <!--    
+
+
+      
+    
+        <form action="excel/" method="GET">
+            {% csrf_token %}
+                <button type="submit" style="margin:5px;" class="btn btn-primary btn-md" value="Submit2 Button">form button text</button>
+        </form>
+   -->     
+
+     
+    
+    {{ block.super }}
+{% endblock %}

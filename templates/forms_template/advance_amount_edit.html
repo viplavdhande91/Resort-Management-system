@@ -1,0 +1,168 @@
+{% extends 'forms_template/base.html' %}
+
+   
+
+
+   {% block page_heading %}
+    
+
+    <li> <a href="{% url 'Advance_Amount'  %}"><font color="white">Go Back to Advance Amount</font></a> </li> 
+ <!--   <li><a href="#">Contact</a> </li>  --> 
+
+    {% endblock %}
+ 
+  
+
+{% block content %}
+<body>
+
+
+
+     
+    <h2>Download Advance amount</font></h2>
+
+<h4><center></center><font face = "Comic sans MS" size =" 5"  color="Brown">Download Advance Amount Statistics As per Employee of Any Month of Any Year(Excel)</font></h4></center>
+
+
+
+
+    <form method="POST" action='distrubuted_total_Advance' class="post-form" >
+    	{% csrf_token %}
+
+    	<div class="container">
+        
+       <div class="form-group">
+          <label ><font color="green">Select Month:</font></label>
+
+             <select class="form-inline" id="Select" name="Select" placeholder="Enter Month Number" style="margin:20px;">
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+             <option value="6">6</option>
+             <option value="7">7</option>
+             <option value="8">8</option>
+             <option value="9">9</option>
+             <option value="10">10</option>
+             <option value="11">11</option>
+             <option value="12">12</option>
+
+             </select>
+             <br>
+
+           <label ><font color="green">Select Year:</font></label>
+
+             <select class="form-inline" id="year" name="year" placeholder="Enter year Number" style="margin:15px;">
+             <option value="2019">2019</option>
+             <option value="2020">2020</option>
+             <option value="2021">2021</option>
+             <option value="2022">2022</option>
+             <option value="2023">2023</option>
+             <option value="2024">2024</option>
+             <option value="2025">2025</option>
+             <option value="2026">2026</option>
+             <option value="2027">2027</option>
+             <option value="2028">2028</option>
+             <option value="2029">2029</option>
+             <option value="2030">2030</option>
+             <option value="2031">2031</option>
+             <option value="2032">2032</option>
+
+             <option value="2033">2033</option>
+
+             <option value="2034">2034</option>
+
+             <option value="2035">2035</option>
+
+             <option value="2036">2036</option>
+
+             <option value="2037">2037</option>
+
+             <option value="2038">2038</option>
+
+             <option value="2039">2039</option>
+
+             <option value="2040">2040</option>
+
+             <option value="2041">2041</option>
+
+             <option value="2042">2042</option>
+
+             <option value="2043">2043</option>
+
+             <option value="2044">2044</option>
+
+             <option value="2045">2045</option>
+             <option value="2046">2046</option>
+
+             <option value="2047">2047</option>
+
+             <option value="2048">2048</option>
+
+             <option value="2049">2049</option>
+
+             <option value="2050">2050</option>
+
+
+
+
+
+
+             </select>  
+           <div>
+             <button type="submit" class="btn btn-primary" style="margin:12px;"   class="save btn btn-default">Click here to Download Excel</button>
+        
+             </div>
+      
+    </div>
+</div>
+          
+
+    </form>
+
+
+
+<!-- modal with help  button -->
+<div class="container">
+
+          <div class="text-right">
+
+  <button type="button"  class="btn btn-success btn-sm" style = "position:relative; left:10px; top:-220px;"  data-toggle="modal" data-target="#myModal">Help</button>
+</div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-xl">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Help Regarding Advance Amount Statistics As per Employee of Any Month of Any Year(Excel)</h4>
+        </div>
+        <div class="modal-body">
+          <p>1)Generate to Advance Amount taken by Employee in Particular Month.</p>
+          <p>2)It checks only <strong>Advanced Amount Table</strong> From Backend for this Computation.It will Technically sum up all the Advanced amounts of Particular Selected Month & Year which are not cleared by Employees.</p>
+
+          <p>3)If atleast one employee tooks some advance in Paricular Month of Particular Year then it will Appear here.If none of the employee Among all the employees takes advance amount in Particular Month Then in such case this Tabular Form Output will be Empty. </p>
+
+
+          <p>4)For Current Month Advance Statistics check here By Entering <strong> Current month</strong> and <strong>Year</strong> at any time of Month </p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+</body>
+
+{% endblock %}
